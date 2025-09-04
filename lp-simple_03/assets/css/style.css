@@ -1,0 +1,97 @@
+@charset "utf-8";
+@import "https://unpkg.com/ress/dist/ress.min.css";
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #333; /* 文字色 */
+}
+
+.inner {
+    width: 1000px;
+    margin: auto;
+}
+
+header {
+    background: url("../img/hero.jpg");
+    height: 50vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section {
+    width: 100%;
+    padding: 80px 0;
+}
+
+/* h2とpの間の外余白を入れる */
+section h2{
+    margin-bottom: 1em; 
+}
+
+/* pの行高を開ける */
+section p {
+    line-height: 1.8;
+}
+
+
+
+/* section first */
+section#first {
+    background: url("https://placehold.jp/3d4070/ffffff/400x400.png") left center no-repeat;
+    margin: auto; /* 中央寄せ */
+    display: flex; /* 横並べ */
+    width: 1000px;
+}
+
+/* 文章部分を左に持ってくる */
+section#first .inner {
+    width: 500px; /* 親要素が1000pxだから */
+    margin-left: auto; /* 左には適度に余白を作る */
+    margin-right: 0; /* 右の余白は0 */
+}
+
+/* pごとに余白を作る */
+section#first p {
+    margin: 1em;
+}
+
+
+
+/* section second.thirdの共通設定 */
+section#second .inner,
+section#third .inner {
+    text-align: center;
+}
+
+section#second p,
+section#third p {
+    margin-bottom: 3em; /* pと画像の間の余白 */
+}
+
+
+
+/* section second */
+section#second {
+    background: #f4f4f4;
+    padding-bottom: 0;
+}
+section#second .inner {
+    text-align: center; /* なんで二回やるのかわからない */
+}
+
+
+
+/* footer */
+footer {
+    background: #eee;
+    padding: 20px 0; /* 上下に20px 左右に0 内余白を開ける*/
+    text-align: center;
+}
